@@ -1,0 +1,43 @@
+@import "_nullstyle";
+@import "_fonts";
+
+$teamCart-brown-yellow: linear-gradient(180deg, #A05322 0%, #EAC54B 100%);
+$teamCart-red-orange: linear-gradient(180deg, #FE3777 0%, #FD6021 100%);
+$teamCart-blue-violet: linear-gradient(180deg, #091E8E 0%, #A769B9 100%);
+$teamCart-darkBlue-lighterBlue:linear-gradient(180deg, #2B2183 0%, #2C6CF6 100%);
+$teamCart-blue-lightBlue: linear-gradient(180deg, #0A25AB 0%, #53BBF1 100%);
+$teamCart-lightBlue-lighterBlue: linear-gradient(180deg, #3784FF 0%, #7BA8FE 100%);
+$teamCart-blue-lightGreen: linear-gradient(180deg, #163CD8 0%, #64CF98 100%);
+
+$black-col: #000;
+$white-col: #fff;
+$red-col: linear-gradient(90deg, #F43A65 0%, #FA6228 100%);
+
+$footer-bg: linear-gradient(180deg, #03024E 0%, rgba(0, 0, 0, 0) 100%);
+
+body {
+	font-family: "SofiaPro";
+	font-weight: 300;
+	&.lock {
+		overflow: hidden;
+	}
+}
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@mixin text-style($fz,$col,$lh: 1) {
+	font-size: $fz;
+	color: $col;
+	line-height: $lh;
+	text-align: center;
+}
+
+
+@import "_header";
+@import "_main";
+@import "_footer";
+@import "_media";
+
