@@ -19,12 +19,14 @@ $footer-bg: linear-gradient(180deg, #03024E 0%, rgba(0, 0, 0, 0) 100%);
 	font-size: $fz;
 	color: $col;
 	line-height: $lh;
-	text-align: center;
 }
 
 body {
 	font-family: "SofiaPro";
 	font-weight: 300;
+	background: linear-gradient(to bottom, rgba(3,2,78,1) 0%, rgba(0,0,0,0) 50%, rgba(3,2,78,1) 100%), $black-col;
+	color: $white-col;
+	text-align: center;
 	&.lock {
 		overflow: hidden;
 	}

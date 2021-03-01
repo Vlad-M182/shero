@@ -18,3 +18,31 @@ function ibg(){
 	}
 }
 ibg();
+
+new Swiper('.motion__slider',{
+	spaceBetween: 30,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		dynamicBullets: true,
+	},
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+			centeredSlides: true,
+			initialSlide: 1,
+		},
+		668: {
+			slidesPerView: 2,
+			centeredSlides: false,
+			initialSlide: 0,
+		},
+		320: {
+			slidesPerView: 1,
+			initialSlide: 0,
+		}
+	},
+})

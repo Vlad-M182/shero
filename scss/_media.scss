@@ -76,11 +76,29 @@
 		display: block;
 	}
 }
+@media(min-width: 992px) {
+	.motion {
+		&__slider-slide {
+			transition: all 0.2s ease-in-out;
+			&.swiper-slide-active{
+				transform: scale(1.1);
+			}
+		}
+	}
+}
 @media(max-width: 1140px) {
 	.greeting {
 		&__img {
 			margin-bottom: calc(191px + (255 - 191) * ((100vw - 320px) / (1140 - 320)));
 			width: calc(200px + (224 - 191) * ((100vw - 320px) / (1140 - 320)));
+		}
+	}
+	.motion {
+		&__slider-body {
+			padding: 0 calc(30px + (70 - 30) * ((100vw - 320px) / (1140 - 320)));
+		}
+		&__text {
+			font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1140 - 320)));
 		}
 	}
 }

@@ -24,7 +24,7 @@
 		}
 	}
 	&__button {
-		@include text-style(18px,$white-col)
+		@include text-style(18px,$white-col);
 	}
 	&__arrow {
 		display: none;
@@ -37,5 +37,117 @@
 		&:hover {
 			transform: translate(-50%, -40%);
 		}
+	}
+}
+.motion {
+	padding: 94px 0px 0px 0px;
+	&__top {
+		margin: 0px 0px 77px 0px;
+	}
+	&__title {
+		background: linear-gradient(90deg, #3388FD 0%, #7CA9FB 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		@include text-style(28px,$white-col,40px);
+		font-weight: 700;
+	}
+	&__subtitle {
+		@include text-style(24px, rgba(255, 255, 255, 0.7),1.2)
+	}
+
+	&__slider-body {
+		position: relative;
+		margin: 0px 0px 57px 0px;
+		padding: 0 70px;
+	}
+	&__slider {
+		max-width: 970px;
+	}
+	&__slider-wrapper {
+		height: 220px;
+		padding-top: 20px;
+	}
+	&__slider-content {
+		height: 167px;
+		width: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__slider-content-item {
+		height: 163px;
+		width: 99%;
+		border-radius: 27px;
+		position: relative;
+		background-color: $black-col;
+		&:before {
+			content: "";
+			border-radius: 27px;
+			position: absolute;
+			top: -2px;
+			bottom: -2px;
+			left: -2px;
+			right: -2px;
+			z-index: -1;
+			background: linear-gradient(180deg, #7CA9FB 0%, #3388FD 100%);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__text {
+		@include text-style(28px,$white-col,1.2);
+		max-width: 827px;
+		margin: 0 auto;
+	}
+	&__text-red {
+		background: linear-gradient(90deg, #F43A65 0%, #FA6228 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: #F43A65;
+	}
+}
+.swiper-button-next, .swiper-button-prev {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.swiper-button-next {
+	right: -10px;
+}
+.swiper-button-prev {
+	left: -10px;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+	font-size: 0;
+	width: 15px;
+	height: 38px;
+}
+.swiper-button-next:after {
+	background: url('../images/greeting/Right.svg') no-repeat;
+	background-size: cover;
+}
+.swiper-button-prev:after {
+	background: url('../images/greeting/Left.svg') no-repeat;
+	background-size: cover;
+}
+.swiper-pagination {
+	position: absolute;
+	bottom: -18px;
+	left: 50%;
+	z-index: 1;
+	transform: translateX(-50%);
+	& .swiper-pagination-bullet-active {
+		width: 13px;
+		height: 13px;
+		background: rgba(255, 255, 255, 0.5);
+	}
+	& .swiper-pagination-bullet {
+		width: 7px;
+		height: 7px;
+		background: $white-col;
+		margin: 0 6.5px;
 	}
 }
