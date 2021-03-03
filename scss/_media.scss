@@ -33,7 +33,6 @@
 				opacity: 0;
 				visibility: hidden;
 				transition: all 0.2s ease-in-out;
-				// background: linear-gradient(180deg, rgba(124, 169, 251, 0) 0%, #3388FD 100%);
 			}
 			&:nth-child(1){
 				grid-column: 1 / 4;
@@ -75,6 +74,11 @@
 	}
 	.team {
 		background: url('../images/team/1.svg') left center no-repeat, url('../images/team/2.svg') 86px 400px no-repeat, url('../images/team/3.svg') 39% 170px no-repeat, url('../images/team/4.svg') right center no-repeat;
+	}
+	.motion {
+		&__bg {
+			bottom: -120px;
+		}
 	}
 }
 @media(min-width: 850px) {

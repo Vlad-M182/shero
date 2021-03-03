@@ -512,7 +512,7 @@ body.lock {
 .motion__bg {
   width: 100%;
   position: absolute;
-  bottom: -120px;
+  bottom: -50px;
   left: 0;
   z-index: -1;
 }
@@ -1055,6 +1055,9 @@ body.lock {
   }
   .team {
     background: url("../images/team/1.svg") left center no-repeat, url("../images/team/2.svg") 86px 400px no-repeat, url("../images/team/3.svg") 39% 170px no-repeat, url("../images/team/4.svg") right center no-repeat;
+  }
+  .motion__bg {
+    bottom: -120px;
   }
 }
 
