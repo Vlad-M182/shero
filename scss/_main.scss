@@ -1,9 +1,8 @@
 .main {
-	padding-top: 80px;
 }
 .greeting {
 	width: 100%;
-	height: calc(100vh - 80px);
+	height: 100vh;
 	&__body {
 		width: 100%;
 		height: 100%;
@@ -14,7 +13,7 @@
 		position: relative;
 	}
 	&__img {
-		margin: 0px 0px 255px 0px;
+		margin: 0px 0px 20vh 0px;
 		width: 18.4%;
 		img {
 			display: block;
@@ -41,6 +40,19 @@
 }
 .motion {
 	padding: 94px 0px 0px 0px;
+	position: relative;
+	&__bg {
+		width: 100%;
+		position: absolute;
+		bottom: -120px;
+		left: 0;
+		z-index: -1;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 	&__top {
 		margin: 0px 0px 77px 0px;
 	}
@@ -54,7 +66,6 @@
 	&__subtitle {
 		@include text-style(24px, rgba(255, 255, 255, 0.7),1.2)
 	}
-
 	&__slider-body {
 		position: relative;
 		margin: 0px 0px 57px 0px;
@@ -111,8 +122,9 @@
 }
 .swiper-button-next, .swiper-button-prev {
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	transform: translateY(-50%);
+	z-index: 1;
 }
 .swiper-button-next {
 	right: -10px;
@@ -149,5 +161,157 @@
 		height: 7px;
 		background: $white-col;
 		margin: 0 6.5px;
+	}
+}
+.projects {
+	padding-top: 49px;
+	&__title {
+		margin: 0px 0px 54px 0px;
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		grid-template-rows: repeat(2,400px);
+		grid-auto-rows: 400px;
+		gap: 37px;
+	}
+	&__item {
+		position: relative;
+		z-index: 2;
+		border-radius: 35px;
+		&:before {
+			content: "";
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			bottom: -2px;
+			right: -2px;
+			z-index: -1;
+			border-radius: 35px;
+			background: linear-gradient(180deg, rgba(124, 169, 251, 0) 0%, #3388FD 100%);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 35px;
+		}
+		&:nth-child(3), &:nth-child(4), &:nth-child(5){
+			display: none;
+		}
+	}
+	&__info {
+		border-radius: 35px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: 2;
+		background: rgba(0, 0, 0, 0.6);
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		@include text-style(24px, $white-col,1);
+	}
+	&__button {
+		margin: 21px auto 0px auto;
+		text-align: center;
+	}
+}
+.team {
+	background: url('../images/team/1.svg') -50px 100% / 138px 221px  no-repeat, url('../images/team/2.svg') 86px 400px no-repeat, url('../images/team/3.svg') 10% 170px no-repeat, url('../images/team/4.svg') center right no-repeat;
+	padding-top: 96px;
+	&__title {
+		margin: 0px 0px 43px 0px;
+	}
+	&__slider {
+		position: relative;
+	}
+	&__slider-container {
+		max-width: 920px;
+		padding: 0 30px;
+	}
+	&__slider-wrapper {
+		padding: 50px 0;
+	}
+	&__slider-slide {
+	}
+	&__slider-content {
+	}
+}
+.teamate {
+	min-height: 265px;
+	padding: 54px 30px;
+	text-align: center;
+	border-radius: 35px;
+	&__photo {
+		width: 146px;
+		height: 147px;
+		border: 2px solid #fff;
+		margin: -100px auto 21px auto;
+		border-radius: 50%;
+		overflow: hidden;
+		background-color: grey;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__name {
+		@include text-style(36px,$white-col,1);
+		margin: 0px 0px 10px 0px;
+		font-weight: 500;
+	}
+	&__prof {
+		@include text-style(18px,$white-col,1);
+	}
+}
+.brown-yellow {
+	background: $teamCart-brown-yellow;
+}
+.red-orange {
+	background: $teamCart-red-orange;
+}
+.blue-violet {
+	background: $teamCart-blue-violet;
+}
+.darkBlue-lighterBlue {
+	background: $teamCart-darkBlue-lighterBlue;
+}
+.blue-lightBlue {
+	background: $teamCart-blue-lightBlue;
+}
+.lightBlue-lighterBlue {
+	background: $teamCart-lightBlue-lighterBlue;
+}
+.blue-lightGreen {
+	background: $teamCart-blue-lightGreen;
+}
+.clients {
+	position: relative;
+	z-index: 2;
+	padding-top: 94px;
+	&__title {
+		margin: 0px 0px 47px 0px;
+	}
+	&__slider {
+		position: relative;
+		max-width: 966px;
+		margin: 0 auto;
+	}
+	&__slider-container {
+		max-width: 890px;
+		padding: 0 30px;
+	}
+	&__slider-wrapper {
+		display: flex;
+		align-items: center;
+	}
+	&__slider-slide {
+	}
+	&__client {
 	}
 }

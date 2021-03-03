@@ -22,12 +22,64 @@ ibg();
 new Swiper('.motion__slider',{
 	spaceBetween: 30,
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.motion__slider-button-next',
+		prevEl: '.motion__slider-button-prev',
 	},
 	pagination: {
 		el: '.swiper-pagination',
 		dynamicBullets: true,
+	},
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+			centeredSlides: true,
+			initialSlide: 1,
+		},
+		668: {
+			slidesPerView: 2,
+			centeredSlides: false,
+			initialSlide: 0,
+		},
+		320: {
+			slidesPerView: 1,
+			initialSlide: 0,
+		}
+	},
+})
+new Swiper('.team__slider-container', {
+	spaceBetween: 40,
+	simulateTouch: false,
+	navigation: {
+		nextEl: '.team__slider-button-next',
+		prevEl: '.team__slider-button-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		dynamicBullets: true,
+	},
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+			centeredSlides: true,
+			initialSlide: 1,
+		},
+		668: {
+			slidesPerView: 2,
+			centeredSlides: false,
+			initialSlide: 0,
+		},
+		320: {
+			slidesPerView: 1,
+			initialSlide: 0,
+		}
+	},
+})
+new Swiper('.clients__slider-container', {
+	spaceBetween: 40,
+	simulateTouch: false,
+	navigation: {
+		nextEl: '.clients__slider-button-next',
+		prevEl: '.clients__slider-button-prev',
 	},
 	breakpoints: {
 		992: {
