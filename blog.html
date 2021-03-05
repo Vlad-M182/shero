@@ -50,256 +50,86 @@
 </header>
 <main class="main">
 	<section class="greeting ibg">
-		<img src="images/greeting/bg.jpg" alt="">
+		<div class="eclipse"></div>
+		<img src="images/blogPage/bg.jpg" alt="">
 		<div class="greeting__body">
-			<div class="greeting__img">
-				<img src="images/greeting/Union.svg" alt="">
-				<img src="images/greeting/STUDIOS.svg" alt="">
+			<div class="greeting__text text">
+				<p>
+					We willingly devote energy to our craft. Most of all, we love extending the limits in the world of animation and filmmaking. We launched a blog to share the latest news,
+				</p>
 			</div>
-			<button class="greeting__button btn btn-1"><span>View reel</span></button>
-			<a href="#motion" class="greeting__arrow">
+			<div class="greeting__text red-text">
+				<p>
+					interesting articles and secrets of animation and film making.
+				</p>
+			</div>
+			<a href="#projects-page" class="greeting__arrow">
 				<img src="images/greeting/arrow.svg" alt="">
 			</a>
 		</div>
 	</section>
-	<section class="motion" id="motion">
-		<div class="motion__bg">
-			<img src="images/greeting/Line.svg" alt="">
-		</div>
-		<div class="container">
-			<div class="motion__top">
-				<h3 class="motion__title">Setting the wheels in motion</h3>
-				<p class="motion__subtitle">Step-by-step approach of creating an animated video</p>
-			</div>
-			<div class="motion__slider-body">
-				<div class="motion__slider swiper-container">
-					<div class="motion__slider-wrapper swiper-wrapper">
-						<div class="motion__slider-slide swiper-slide">
-							<div class="motion__slider-content">
-								<div class="motion__slider-content-item">
-									<p>Slide 1</p>
-								</div>
-							</div>
-						</div>
-						<div class="motion__slider-slide swiper-slide">
-							<div class="motion__slider-content">
-								<div class="motion__slider-content-item">
-									<p>Slide 2</p>
-								</div>
-							</div>
-						</div>
-						<div class="motion__slider-slide swiper-slide">
-							<div class="motion__slider-content">
-								<div class="motion__slider-content-item">
-									<p>Slide 3</p>
-								</div>
-							</div>
-						</div>
-						<div class="motion__slider-slide swiper-slide">
-							<div class="motion__slider-content">
-								<div class="motion__slider-content-item">
-									<p>Slide 4</p>
-								</div>
-							</div>
-						</div>
-						<div class="motion__slider-slide swiper-slide">
-							<div class="motion__slider-content">
-								<div class="motion__slider-content-item">
-									<p>Slide 5</p>
-								</div>
-							</div>
-						</div>
-						<div class="motion__slider-slide swiper-slide">
-							<div class="motion__slider-content">
-								<div class="motion__slider-content-item">
-									<p>Slide 6</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-pagination"></div>
-				</div>
-				<div class="motion__slider-button-next swiper-button-next"></div>
-				<div class="motion__slider-button-prev swiper-button-prev"></div>
-				
-			</div>
-			<div class="motion__text">
-				<p>
-					From the first frame to the final one, Shero provides the highest quality within the scope of your budget and deadline.
-				</p>
-				<p class="motion__text-red">
-					Our ultimate mission is to help our clients breathe life into their ideas that will make an indelible impression.
-				</p>
-			</div>
-		</div>
-	</section>
-	<section class="projects">
-		<div class="container">
-			<h2 class="projects__title title2">Projects</h2>
+	<section class="projects projects-page" id="projects-page">
+		<div class="projectsPage__container">
+			<ul class="projects__cat">
+				<button class="projects__cat-arrow" type="button">
+					<img src="images/projectsPage/arrow.svg">
+				</button>
+				<li class="projects__cat-item active">
+					<button class="projects__cat-button" category="all" type="button">All</button>
+				</li>
+				<li class="projects__cat-item">
+					<button class="projects__cat-button" category="business" type="button">Business projects</button>
+				</li>
+				<li class="projects__cat-item">
+					<button class="projects__cat-button" category="own" type="button">Own projects</button>
+				</li>
+			</ul>
 			<div class="projects__body">
-				<a href="#" class="projects__item">
+				<a href="#" class="projects__item" category="business">
 					<img src="images/projects/1.jpg" alt="">
 					<div class="projects__info">
 						<p>
+							business
 							THE MIGHTY GRAND PITON
 						</p>
 					</div>
 				</a>
-				<a href="#" class="projects__item">
+				<a href="#" class="projects__item" category="own">
 					<img src="images/projects/2.jpg" alt="">
 					<div class="projects__info">
 						<p>
+							own
 							THE MIGHTY GRAND PITON
 						</p>
 					</div>
 				</a>
-				<a href="#" class="projects__item">
+				<a href="#" class="projects__item" category="own">
 					<img src="images/projects/3.jpg" alt="">
 					<div class="projects__info">
 						<p>
+							own
 							THE MIGHTY GRAND PITON
 						</p>
 					</div>
 				</a>
-				<a href="#" class="projects__item">
+				<a href="#" class="projects__item" category="business">
 					<img src="images/projects/4.jpg" alt="">
 					<div class="projects__info">
 						<p>
+							business
 							THE MIGHTY GRAND PITON
 						</p>
 					</div>
 				</a>
-				<a href="#" class="projects__item">
+				<a href="#" class="projects__item" category="own">
 					<img src="images/projects/5.jpg" alt="">
 					<div class="projects__info">
 						<p>
+							own
 							THE MIGHTY GRAND PITON
 						</p>
 					</div>
 				</a>
-			</div>
-			<div class="projects__button">
-				<a class="btn-link" href="#"><span>More projects</span></a>
-			</div>
-		</div>
-	</section>
-	<section class="team">
-		<div class="container">
-			<h2 class="team__title title2">Meet the team</h2>
-			<div class="team__slider">
-				<div class="team__slider-container swiper-container">
-					<div class="team__slider-wrapper swiper-wrapper">
-						<div class="team__slider-slide swiper-slide">
-							<div class="team__slider-content teamate brown-yellow">
-								<div class="teamate__photo">
-									<!-- <img src="" alt=""> -->
-								</div>
-								<p class="teamate__name">Roman</p>
-								<p class="teamate__prof">Producer/Scriptwriter</p>
-							</div>
-						</div>
-						<div class="team__slider-slide swiper-slide">
-							<div class="team__slider-content teamate red-orange">
-								<div class="teamate__photo">
-									<!-- <img src="" alt=""> -->
-								</div>
-								<p class="teamate__name">Olga</p>
-								<p class="teamate__prof">Design/Illustration</p>
-							</div>
-						</div>
-						<div class="team__slider-slide swiper-slide">
-							<div class="team__slider-content teamate blue-violet">
-								<div class="teamate__photo">
-									<!-- <img src="" alt=""> -->
-								</div>
-								<p class="teamate__name">Vladislav</p>
-								<p class="teamate__prof">Creative Producer</p>
-							</div>
-						</div>
-						<div class="team__slider-slide swiper-slide">
-							<div class="team__slider-content teamate darkBlue-lighterBlue">
-								<div class="teamate__photo">
-									<!-- <img src="" alt=""> -->
-								</div>
-								<p class="teamate__name">Roman</p>
-								<p class="teamate__prof">Producer/Scriptwriter</p>
-							</div>
-						</div>
-						<div class="team__slider-slide swiper-slide">
-							<div class="team__slider-content teamate blue-lightBlue">
-								<div class="teamate__photo">
-									<!-- <img src="" alt=""> -->
-								</div>
-								<p class="teamate__name">Olga</p>
-								<p class="teamate__prof">Design/Illustration</p>
-							</div>
-						</div>
-						<div class="team__slider-slide swiper-slide">
-							<div class="team__slider-content teamate lightBlue-lighterBlue">
-								<div class="teamate__photo">
-									<!-- <img src="" alt=""> -->
-								</div>
-								<p class="teamate__name">Roman</p>
-								<p class="teamate__prof">Creative Producer</p>
-							</div>
-						</div>
-						<div class="team__slider-slide swiper-slide">
-							<div class="team__slider-content teamate blue-lightGreen">
-								<div class="teamate__photo">
-									<!-- <img src="" alt=""> -->
-								</div>
-								<p class="teamate__name">Roman</p>
-								<p class="teamate__prof">Producer/Scriptwriter</p>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-pagination"></div>
-				</div>
-				<div class="team__slider-button-next swiper-button-next"></div>
-				<div class="team__slider-button-prev swiper-button-prev"></div>
-			</div>
-		</div>
-	</section>
-	<section class="clients">
-		<div class="container">
-			<h2 class="clients__title title2">Clients</h2>
-			<div class="clients__slider">
-				<div class="clients__slider-container swiper-container">
-					<div class="clients__slider-wrapper swiper-wrapper">
-						<div class="clients__slider-slide swiper-slide">
-							<div class="clients__client">
-								<img src="images/clients/1.svg" alt="Adobe">
-							</div>
-						</div>
-						<div class="clients__slider-slide swiper-slide">
-							<div class="clients__client">
-								<img src="images/clients/2.svg" alt="Adobe">
-							</div>
-						</div>
-						<div class="clients__slider-slide swiper-slide">
-							<div class="clients__client">
-								<img src="images/clients/3.svg" alt="Adobe">
-							</div>
-						</div>
-						<div class="clients__slider-slide swiper-slide">
-							<div class="clients__client">
-								<img src="images/clients/1.svg" alt="Adobe">
-							</div>
-						</div>
-						<div class="clients__slider-slide swiper-slide">
-							<div class="clients__client">
-								<img src="images/clients/2.svg" alt="Adobe">
-							</div>
-						</div>
-						<div class="clients__slider-slide swiper-slide">
-							<div class="clients__client">
-								<img src="images/clients/3.svg" alt="Adobe">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clients__slider-button-next swiper-button-next"></div>
-				<div class="clients__slider-button-prev swiper-button-prev"></div>
 			</div>
 		</div>
 	</section>
@@ -363,28 +193,8 @@
 	</div>
 </footer>
 
-<section class="greeting__pop-pup pop-pup">
-	<div class="pop-pup__button">
-		<button class="greeting__pop-pup-button pop-pup-close" type="button">
-			<img src="images/pop-pup/close.svg" alt="Close">
-		</button>
-	</div>
-	<div class="video">
-		<video controls preload="none" poster="images/pop-pup/2.jpg">
-			<source
-			src="video/salon.mp4"
-			type="video/mp4">
-			<source
-			src="video/salon.ogg"
-			type="video/ogg">
-		</video>
-	</div>
-	
-</section>
-
-<script src="js/swiper.min.js"></script>
 <script src="js/app.js"></script>
-<script src="js/index.js"></script>
+<script src="js/productsPage.js"></script>
 </body>
 
 </html>

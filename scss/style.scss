@@ -20,6 +20,9 @@ $footer-bg: linear-gradient(180deg, #03024E 0%, rgba(0, 0, 0, 0) 100%);
 	color: $col;
 	line-height: $lh;
 }
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	font-family: "SofiaPro";

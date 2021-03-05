@@ -110,6 +110,10 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "SofiaPro";
   font-weight: 300;
