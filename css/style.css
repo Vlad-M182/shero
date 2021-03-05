@@ -137,6 +137,7 @@ body.lock {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  z-index: 1;
 }
 
 .ibg > img {
@@ -261,6 +262,41 @@ body.lock {
   background: linear-gradient(90deg, #3388FD 0%, #7CA9FB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.text {
+  font-size: 36px;
+  color: #fff;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.red-text {
+  background: -webkit-gradient(linear, left top, right top, from(#FF3D6A), to(#FA6128));
+  background: linear-gradient(90deg, #FF3D6A 0%, #FA6128 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  color: #ff3d6a;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.eclipse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+.projectsPage__container {
+  max-width: 950px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .pop-pup {
@@ -560,6 +596,11 @@ body.lock {
           transform: translate(-50%, -40%);
 }
 
+.greeting__text {
+  max-width: 950px;
+  padding: 0 15px;
+}
+
 .motion {
   padding: 94px 0px 0px 0px;
   position: relative;
@@ -776,6 +817,70 @@ body.lock {
 
 .projects__item:nth-child(3), .projects__item:nth-child(4), .projects__item:nth-child(5) {
   display: none;
+}
+
+.projects__cat {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px 0px 48px 0px;
+  position: relative;
+  border: 2px solid #BE3B46;
+  border-radius: 30px;
+  height: 61px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects__cat.active {
+  height: 185px;
+}
+
+.projects__cat-arrow {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 29px;
+  height: 20px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects__cat-arrow img {
+  width: 19px;
+  height: 10px;
+}
+
+.projects__cat li {
+  border-bottom: 1px solid #be3b46;
+}
+
+.projects__cat-button {
+  background: transparent;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #fff;
+  line-height: 60px;
+}
+
+.projects-page .projects__item {
+  display: block;
 }
 
 .projects__info {
@@ -1109,6 +1214,51 @@ body.lock {
     margin: 40px 0px 0px 0px;
     text-align: right;
   }
+  .projects__cat {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: none;
+    border-radius: 0;
+    height: auto;
+    overflow: auto;
+  }
+  .projects__cat-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 255px;
+            flex: 0 1 255px;
+    max-width: 255px;
+    border-radius: 24px;
+    border: 1px solid #be3b46;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .projects__cat-item:hover {
+    background-color: rgba(190, 59, 70, 0.3);
+  }
+  .projects__cat-item:not(:last-child) {
+    margin: 0px 5% 0px 0px;
+  }
+  .projects__cat-item.active {
+    background-color: #be3b46;
+  }
+  .projects__cat-arrow {
+    display: none;
+  }
+  .projects__cat-button {
+    background: transparent;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 34px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 48px;
+  }
   .team {
     background: url("../images/team/1.svg") left center no-repeat, url("../images/team/2.svg") 86px 400px no-repeat, url("../images/team/3.svg") 39% 170px no-repeat, url("../images/team/4.svg") right center no-repeat;
   }
@@ -1227,5 +1377,8 @@ body.lock {
   }
   .motion__text {
     font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1140 - 320)));
+  }
+  .red-text, .text {
+    font-size: calc(24px + (36 - 24) * ((100vw - 320px) / (1140 - 320)));
   }
 }
