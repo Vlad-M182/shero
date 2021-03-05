@@ -2,11 +2,25 @@ let headerBurger = document.querySelector('.header__burger');
 let headerBurgerIcon = document.querySelector('.header__burgerIcon');
 let headerNav = document.querySelector('.header__nav');
 let body = document.querySelector('body');
+let greetingButton = document.querySelector('.greeting__button');
+let greetingPopPup = document.querySelector('.greeting__pop-pup');
+let greetingPopPupButton = document.querySelector('.greeting__pop-pup-button');
 
 headerBurger.addEventListener('click', function() {
 	headerBurgerIcon.classList.toggle('open');
 	headerNav.classList.toggle('open');
 	body.classList.toggle('lock');
+})
+
+greetingButton.addEventListener('click', function() {
+	greetingPopPup.classList.add('show');
+})
+
+greetingPopPup.addEventListener('click', function() {
+	greetingPopPup.classList.remove('show');
+})
+greetingPopPupButton.addEventListener('click', function() {
+	greetingPopPup.classList.remove('show');
 })
 
 function ibg(){
