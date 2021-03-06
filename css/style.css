@@ -1539,6 +1539,7 @@ body.lock {
     top: initial;
     right: 60%;
     bottom: -23px;
+    z-index: 2;
     width: 99px;
     height: 47px;
     background: -webkit-gradient(linear, left top, right top, from(#3388FD), to(#7CA9FB));
