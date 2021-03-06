@@ -1208,6 +1208,13 @@ body.lock {
     opacity: 1;
     visibility: visible;
   }
+  .projects__item.disabled {
+    pointer-events: none;
+  }
+  .projects__item.disabled:hover:before, .projects__item.disabled:hover .projects__info {
+    opacity: 0;
+    visibility: hidden;
+  }
   .projects__info {
     opacity: 0;
     visibility: hidden;

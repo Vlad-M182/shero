@@ -27,6 +27,23 @@ const addOrRemoveDisplayBlock = (arr,clicked) => {
 	})
 }
 
+const disableElement = (arr,clicked) => {
+	arr.forEach((item,index) => {
+		if(item.hasAttribute('category') && clicked.hasAttribute('category')) {
+			if(clicked.getAttribute('category') == item.getAttribute('category')){
+				item.style = "opacity: 1;";
+				item.classList.remove('disabled');
+			} else if(clicked.getAttribute('category') == 'all'){
+				item.style = "opacity: 1;";
+				item.classList.remove('disabled');
+			} else {
+				item.style = "opacity: 0.2;";
+				item.classList.add('disabled');
+			}
+		}
+	})
+}
+
 const removeClassFromArrElem = (arr) => {
 	arr.forEach((el) => {
 		el.classList.remove('active');
@@ -45,7 +62,7 @@ projectsCatItems.forEach((catItem, index) => {
 		else {
 			removeClassFromArrElem(projectsCatItems);
 			target.parentElement.classList.add('active');
-			addOrRemoveDisplayBlock(projectsItem,target);
+			disableElement(projectsItem,target);
 		}
 	})
 })
