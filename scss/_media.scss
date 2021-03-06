@@ -15,6 +15,19 @@
 			height: 177px;
 		}
 	}
+	.slide {
+		&__item {
+			padding: 55px 22px;
+		}
+		&__title {
+			font-size: 36px;
+		}
+	}
+	.comments {
+		&__item-about {
+			padding: 23px 29px;
+		}
+	}
 }
 @media(min-width: 768px) {
 	.projects {
@@ -119,9 +132,142 @@
 	.team {
 		background: url('../images/team/1.svg') left center no-repeat, url('../images/team/2.svg') 86px 400px no-repeat, url('../images/team/3.svg') 39% 170px no-repeat, url('../images/team/4.svg') right center no-repeat;
 	}
+	.aboutPage-team {
+		background: none;
+	}
 	.motion {
 		&__bg {
 			bottom: -120px;
+		}
+	}
+	.works {
+		&__text {
+			margin: 0px 0px 139px 0px;
+		}
+		&__slider {
+			position: relative;
+			padding: 0;
+		}
+		&__slider-contaier {
+			padding: 0;
+		}
+		&__slider-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__slider-slide {
+			padding: 0 15px;
+			flex: 0 1 50%;
+			margin: 0px 0px 30px 0px;
+			max-width: none;
+		}
+		&__slider-button-next, &__slider-button-prev {
+			display: none;
+		}
+		.swiper-pagination {
+			display: none;
+		}
+	}
+	.slide {
+		&__title {
+			font-size: 26px;
+		}
+	}
+	.comments {
+		background: url('../images/team/1.svg') -50px 100% / 138px 221px  no-repeat, url('../images/team/2.svg') 86px 400px no-repeat, url('../images/team/3.svg') 65% 170px no-repeat, url('../images/team/4.svg') center right no-repeat;
+		padding: 72px 0 0 0;
+		&__title {
+			margin: 0px 0px 77px 0px;
+		}
+		&__slider {
+			position: relative;
+			padding:  0;
+		}
+		&__slider-container {
+			padding: 0;
+			padding-bottom: 47px;
+		}
+		&__slider-wrapper {
+		}
+		&__slider-slide {
+		}
+		&__item {
+			margin: 0;
+			max-width: none;
+			position: relative;
+		}
+		&__item-avatar {
+			width: 65%;
+			padding-bottom: 37%;
+			border-radius: 10px 10px 0 10px;
+		}
+		&__item-about {
+			position: absolute;
+			right: 0;
+			bottom: -47px;
+			z-index: 2;
+			width: 60%;
+			background-color: #fff;
+			color:#242424;
+			padding: 23px 15px;
+			text-align: left;
+			border-radius: 0 10px 10px 0;
+		}
+		&__slider-button-prev {
+			display: none;
+		}
+		&__slider-button-next {
+			top: initial;
+			right: 60%;
+			bottom: -23px;
+			width: 99px;
+			height: 47px;
+			background: linear-gradient(90deg, #3388FD 0%, #7CA9FB 100%);
+			border-radius: 0px 0px 0px 10px;
+			color: $white-col;
+			padding: 0 0 0 14px;
+			&:hover {
+				&:after {
+					width: 100%;
+					height: 100%;
+					background: url("../images/aboutPage/comments/arrow-next.svg") 80% center no-repeat;
+				}
+			}
+			span {
+				display: inline;
+			}
+			&:after {
+				width: 100%;
+				height: 100%;
+				background: url("../images/aboutPage/comments/arrow-next.svg") 70% center no-repeat;
+				transition: all 0.2s ease-in-out;
+			}
+		}
+		.swiper-pagination {
+			display: none;
+		}
+	}
+	.about-item {
+		&__top {
+			display: flex;
+			justify-content: space-between;
+			margin: 0px 0px 21px 0px;
+		}
+		&__left {
+		}
+		&__name {
+			@include text-style(18px,inherit,1.5);
+			font-weight: 400;
+		}
+		&__prof {
+			@include text-style(12px,rgba(36,36,36,0.7),1.2);
+		}
+		&__right {
+		}
+		&__bottom {
+		}
+		&__comment {
+			@include text-style(15px,inherit,1.2);
 		}
 	}
 }
@@ -204,6 +350,28 @@
 		}
 	}
 }
+@media(min-width: 900px) {
+	.works {
+		&__text {
+			margin: 0px 0px 139px 0px;
+		}
+		&__slider {
+			position: relative;
+			padding: 0;
+		}
+		&__slider-contaier {
+			padding: 0;
+			overflow: visible;
+		}
+		&__slider-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__slider-slide {
+			flex: 0 1 33.3334%;
+		}
+	}
+}
 @media(min-width: 992px) {
 	.greeting {
 		&__img {
@@ -216,6 +384,23 @@
 			&.swiper-slide-active {
 				transform: scale(1.1);
 			}
+		}
+	}
+	.works {
+		&__slider-contaier {
+			margin: 0 -27.5px;
+		}
+		&__slider-slide {
+			padding: 0 27.5px;
+			margin: 0px 0px 50px 0px;
+		}
+	}
+	.slide {
+		&__title {
+			font-size: 24px;
+		}
+		&__text {
+			font-size: 16px;
 		}
 	}
 }
@@ -233,7 +418,7 @@
 			font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1140 - 320)));
 		}
 	}
-	.red-text, .text {
+	.red-text, .text, .blue-text {
 		font-size: calc(24px + (36 - 24) * ((100vw - 320px) / (1140 - 320)));
 	}
 }

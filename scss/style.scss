@@ -144,13 +144,13 @@ body {
 	}
 }
 .title2 {
-	@include text-style(42px,rgba(51,136,253,1),1);
+	@include text-style(42px,rgba(51,136,253,1),1.4);
 	background: linear-gradient(90deg, #3388FD 0%, #7CA9FB 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 .text {
-	@include text-style(36px,$white-col,1);
+	@include text-style(36px,$white-col,1.4);
 	font-weight: 400;
 }
 .red-text {
@@ -158,6 +158,13 @@ body {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	@include text-style(36px,rgb(255,61,106),1);
+	font-weight: 400;
+}
+.blue-text {
+	background: linear-gradient(90deg, #1175FF 0%, #95BAFF 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	@include text-style(36px,#1175FF,1.3);
 	font-weight: 400;
 }
 .eclipse {
