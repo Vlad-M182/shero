@@ -28,6 +28,18 @@
 			padding: 23px 29px;
 		}
 	}
+	.contact {
+		&__contacts {
+			&-item {
+				flex: 0 1 50%;
+			}
+		}
+	}
+	.form-contact {
+		form {
+			padding: 40px 60px;
+		}
+	}
 }
 @media(min-width: 768px) {
 	.projects {
@@ -271,6 +283,43 @@
 			@include text-style(15px,inherit,1.2);
 		}
 	}
+	.contact {
+		&__contacts {
+			justify-content: space-between;
+			&-item {
+				flex: 0 1 30%;
+				margin: 0;
+			}
+		}
+		&__phone {
+			order: 1;
+		}
+		&__number {
+		}
+		&__social {
+			order: 2;
+			margin: 0;
+			a {
+				transition: all 0.2s ease-in-out;
+			}
+			a:hover {
+				filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+			}
+		}
+		&__mail {
+			order: 3;
+		}
+	}
+	.form-contact {
+		form {
+			textarea {
+				height: 85%;
+			}
+		}
+		&__inputs {
+			flex-direction: row;
+		}
+	}
 }
 @media(min-width: 850px) {
 	.header {
@@ -374,6 +423,16 @@
 	}
 }
 @media(min-width: 992px) {
+	.btn:hover:after {
+		top: -180%;
+	}
+	.btn-link {
+		&:hover:after {
+			height: 100%;
+			width: 100%;
+			transition: height 0.4s ease 0.15s, width 0.4s ease;
+		}
+	}
 	.greeting {
 		&__img {
 			margin-bottom: 255px;
@@ -421,5 +480,10 @@
 	}
 	.red-text, .text, .blue-text {
 		font-size: calc(24px + (36 - 24) * ((100vw - 320px) / (1140 - 320)));
+	}
+	.contact {
+		&__title {
+			font-size: calc(36px + (96 - 36) * ((100vw - 320px) / (1140 - 320)));
+		}
 	}
 }

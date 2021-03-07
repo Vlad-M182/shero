@@ -513,3 +513,127 @@
 		@include text-style(15px,inherit,1.2);
 	}
 }
+.contact {
+	padding: 175px 0px 0px 0px;
+	&__top {
+		margin: 0px 0px 124px 0px;
+	}
+	&__title {
+		@include text-style(96px,$white-col,1.4);
+		font-weight: 900;
+		margin: 0px 0px 10px 0px;
+		letter-spacing: 0.3em;
+	}
+	&__subtitle {
+		@include text-style(24px,$white-col,1.4);
+		font-weight: 400;
+	}
+	&__contacts {
+		max-width: 854px;
+		margin: 0 auto 59px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		position: relative;
+		z-index: 2;
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex: 0 1 100%;
+			margin: 0px 0px 57px 0px;
+			img {
+				width: 38px;
+				height: 36px;
+				margin: 0px 0px 38px 0px;
+			}
+			a {
+				@include text-style(20px,$white-col,1.3);
+				font-weight: 400;
+			}
+		}
+	}
+	&__phone {
+		order: 1;
+	}
+	&__number {
+	}
+	&__social {
+		order: 3;
+		margin: 0 auto;
+		a:not(:last-child) {
+			margin: 0px 18px 0px 0px;
+		}
+	}
+	&__mail {
+		order: 2;
+	}
+	&__form {
+		position: relative;
+		z-index: 3;
+		max-width: 854px;
+		margin: 0 auto;
+		border-radius: 30px;
+		&:before {
+			content: "";
+			position: absolute;
+			top: -2px;
+			bottom: -2px;
+			left: -2px;
+			right: -2px;
+			z-index: -1;
+			border-radius: 30px;
+			background: linear-gradient(180deg, #3388FD 0%, rgba(124, 169, 251, 0) 100%);
+		}
+	}
+}
+.form-contact {
+	form {
+		background: $black-col;
+		border-radius: 30px;
+		padding: 25px 20px;
+		label {
+			@include text-style(14px,$white-col,1.5);
+			font-weight: 700;
+			margin: 0px 0px 11px 0px;
+			display: block;
+		}
+		input, textarea {
+			@include text-style(14px,rgba(51, 51, 51, 0.6),1.5);
+			padding: 20px 19px;
+			margin: 0px 0px 21px 0px;
+			display: block;
+			width: 100%;
+			border-radius: 15px;
+			border: 2px solid transparent;
+			&:focus {
+				border: 2px solid rgba(51,136,253,0.7);
+			}
+		}
+		textarea {
+			height: 211px;
+			resize: none;
+		}
+	}
+	&__inputs {
+		margin: 0px -15px 55px -15px;
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+	&__left {
+		flex: 0 1 50%;
+		padding: 0 15px;
+	}
+	&__right {
+		flex: 0 1 50%;
+		padding: 0 15px;
+	}
+	&__button {
+		color: $white-col;
+		font-size: 17px;
+		padding: 0.9em 2.4em;
+		margin: 0 auto;
+	}
+}
