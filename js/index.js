@@ -15,6 +15,7 @@ greetingPopPupButton.addEventListener('click', function() {
 
 new Swiper('.motion__slider',{
 	spaceBetween: 30,
+	loop: true,
 	navigation: {
 		nextEl: '.motion__slider-button-next',
 		prevEl: '.motion__slider-button-prev',
