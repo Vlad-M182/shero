@@ -44,6 +44,7 @@ new Swiper('.motion__slider',{
 new Swiper('.team__slider-container', {
 	spaceBetween: 40,
 	simulateTouch: false,
+	loop: true,
 	navigation: {
 		nextEl: '.team__slider-button-next',
 		prevEl: '.team__slider-button-prev',
